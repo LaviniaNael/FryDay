@@ -160,6 +160,7 @@
           <div class="steam-animation">
             <img
               src="/assets/media/hero.png"
+              loading="eager"
               alt="Delicious Burger"
               class="w-full max-w-md lg:max-w-lg fade-delay-1 fade-in-right"
             />
@@ -255,7 +256,7 @@
           </button>
         </div>
         <!-- Menu Grid -->
-        <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <!-- Main Item: Grilled Sea Bream -->
           <div
             class="menu-item fade-in"
@@ -2010,7 +2011,7 @@
     </section>
 
     <!-- Special Offers Section -->
-    <section id="offers" class="py-15 text-white">
+    <section id="offers" class="py-15 text-white overflow-x-hidden">
       <div
         class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12 transition-all duration-500"
       >
@@ -2035,7 +2036,7 @@
             class="price flex items-center justify-center md:justify-start mb-6"
           >
             <p
-              class="text-lg font-bold text-white decoration-gray-200 line-through font-serif"
+              class="text-lg font-bold text-white decoration-gray-200 line-through font-serif italic"
             >
               600 EGP
             </p>
@@ -2043,7 +2044,7 @@
               300 EGP
             </p>
           </div>
-          <p class="text-lg mb-6 md:w-156 ">
+          <p class="text-lg mb-6 md:w-80 lg:w-150">
             Get a 50% discount on this delicious dish this weekend! Don't miss
             out on this limited-time deal.
           </p>
@@ -2080,7 +2081,7 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-gray-100">
+    <section id="testimonials" class="py-20 bg-gray-100 overflow-x-hidden">
       <div class="container mx-auto px-4 text-center">
         <h2 class="text-4xl font-extrabold mb-12 text-gray-800">
           What Our Customers Say
@@ -2158,13 +2159,13 @@
           <!-- Slider controls -->
           <button
             id="prev-slide"
-            class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-primary text-white p-3 rounded-full shadow-md hover:scale-110 transition"
+            class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-primary text-white px-4 py-2 rounded-full shadow-md hover:scale-110 transition"
           >
             &#10094;
           </button>
           <button
             id="next-slide"
-            class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-primary text-white p-3 rounded-full shadow-md hover:scale-110 transition"
+            class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-primary text-white px-4 py-2 rounded-full shadow-md hover:scale-110 transition"
           >
             &#10095;
           </button>
@@ -2175,12 +2176,12 @@
     <!--SUCCESFUL RESERVATION NOTI-->
     <div
       id="reservation-success"
-      class="hidden fade-in fixed top-6 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50"
+      class="hidden fade-in fixed top-6 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 overflow-x-hidden"
     >
       Reservation successful! Thank you for choosing FryDay.
     </div>
     <!-- Contact & Reservation Section -->
-    <section id="contact" class="py-20 bg-white">
+    <section id="contact" class="py-20 bg-white overflow-x-hidden">
       <div class="container mx-auto px-10">
         <div class="text-center mb-12">
           <h2 class="text-4xl font-bold">Contact & Reservation</h2>
@@ -2245,21 +2246,21 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="bg-gray-700 text-white pb-5 pt-8 antialiased">
+    <footer class="bg-gray-700 text-white pb-5 pt-8 antialiased overflow-x-hidden">
       <div class="container mx-auto px-4 text-center">
         <div class="grid md:grid-cols-3 gap-8 mb-4">
           <div>
             <h3 class="text-3xl font-extrabold mb-2">
               <span class="text-accent">Fry</span>Day
             </h3>
-            <p class="w-80 mx-auto text-sm text-gray-200">
+            <p class="lg:w-80 mx-auto text-sm text-gray-200">
               The best place to enjoy fresh and delicious meals with family and
               friends.
             </p>
           </div>
           <div>
             <h3 class="text-2xl font-bold mb-4">Quick Links</h3>
-            <ul class="gap-4 flex items-center justify-center">
+            <ul class="gap-4 flex items-center justify-center md:mx-2 lg:mx-0">
               <li>
                 <a
                   href="#"

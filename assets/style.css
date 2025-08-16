@@ -167,8 +167,8 @@ h6 {
 .menu-item {
   transition: all 0.4s ease;
   position: relative;
-  width: auto-fit;
-  height: 430px;
+  width: auto;
+  height: 440px;
 }
 
 .menu-item.is-appearing {

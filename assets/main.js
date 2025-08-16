@@ -43,55 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
       header.classList.remove("bg-secondary");
     }
   });
-  // Menu Filtering Logic
-  // const menuItems = document.querySelectorAll(".menu-item");
-
-  // filterButtons.forEach((button) => {
-  //   button.addEventListener("click", () => {
-  //     filterButtons.forEach((btn) =>
-  //       btn.classList.remove("filter-menu-active", "bg-primary", "text-white")
-  //     );
-  //     button.classList.add("filter-menu-active", "bg-primary", "text-white");
-
-  //     filterButtons.forEach((btn) => {
-  //       btn.addEventListener("click", () => {
-  //         const filter = btn.getAttribute("data-filter");
-
-  //         if (filter !== "all") {
-  //           viewMoreButton.style.display = "none";
-  //         } else {
-  //           viewMoreButton.style.display = "block";
-  //         }
-
-  //         // your filtering logic for items goes here...
-  //         menuItems.forEach((item) => {
-  //           const itemCategory = item.dataset.category;
-  //           const shouldShow = filter === "all" || itemCategory === filter;
-
-  //           const isHidden = item.style.display === "none";
-
-  //           if (shouldShow) {
-  //             if (isHidden) {
-  //               item.style.display = "block";
-  //               item.classList.add("is-appearing");
-
-  //               setTimeout(() => {
-  //                 item.classList.remove("is-appearing");
-  //               }, 10);
-  //             }
-  //           } else {
-  //             item.style.display = "none";
-  //           }
-  //         });
-  //       });
-  //     });
-  //   });
-  // });
-
   // Countdown Timer Logic
   const countdownDate = new Date();
   countdownDate.setDate(
-    countdownDate.getDate() + ((6 - countdownDate.getDay() + 1) % 7) + 1
+    countdownDate.getDate() + ((6 - countdownDate.getDay() + 1) % 7) + 3
   );
   countdownDate.setHours(23, 59, 59, 999);
 
