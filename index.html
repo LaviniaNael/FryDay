@@ -1,0 +1,2363 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FryDay Restaurant</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!--Tailwind CSS-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="icon" href="/assets/media/favi.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body class="bg-white">
+    <!-- Header Section -->
+    <header>
+      <div
+        id="header"
+        class="fixed top-0 left-0 right-0 z-50 transition-colors duration-300"
+      >
+        <div class="container mx-auto px-4">
+          <div class="flex justify-between items-center py-4">
+            <!-- Logo -->
+            <a
+              href="#"
+              id="logo-whole"
+              class="text-4xl font-extrabold tracking-wide"
+            >
+              <span class="text-accent">Fry</span
+              ><span id="logo-day" class="text-white">Day</span>
+            </a>
+            <!-- Desktop Navigation -->
+            <nav
+              id="bar"
+              class="hidden font-semibold tracking-wider text-sm md:flex items-center space-x-8 text-white"
+            >
+              <a href="#" class="hover-text-accent transition duration-300"
+                >Home</a
+              >
+              <a href="#menu" class="hover-text-accent transition duration-300"
+                >Menu</a
+              >
+              <a
+                href="#offers"
+                class="hover-text-accent transition duration-300"
+                >Offers</a
+              >
+              <a
+                href="#contact"
+                class="hover-text-accent transition duration-300"
+                >Contact</a
+              >
+              <a
+                href="#contact"
+                class="bg-primary text-white px-6 py-2 rounded-full light-hover transition duration-300"
+                >Reserve Now</a
+              >
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden relative">
+              <svg
+                id="hamburger-icon"
+                class="w-8 h-8 text-white z-1000 block"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobile-menu"
+        class="fixed top-0 right-0 h-full w-2/3 bg-secondary z-40 transition-transform duration-300 ease-in-out transform translate-x-full"
+      >
+        <a
+          href="#"
+          class="block text-white text-center mt-20 py-3 hover:text-orange-500 transition duration-500"
+          >Home</a
+        >
+        <a
+          href="#menu"
+          class="block text-white text-center py-3 hover:text-orange-500 transition duration-500"
+          >Menu</a
+        >
+        <a
+          href="#offers"
+          class="block text-white text-center py-3 hover:text-orange-500 transition duration-500"
+          >Offers</a
+        >
+        <a
+          href="#contact"
+          class="block text-white text-center py-3 hover:text-orange-500 transition duration-500"
+          >Contact</a
+        >
+        <a
+          href="#contact"
+          class="block text-white text-center light-hover py-4 bg-primary mt-2 transition duration-500"
+          >Reserve Now</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="hero flex items-center justify-center"
+      style="
+        min-height: calc(100vh + 68px);
+        background: url(/assets/media/bg.jpg) no-repeat center center;
+        background-size: cover;
+      "
+    >
+      <div
+        class="container mx-auto px-5 flex flex-col md:flex-row items-center justify-between"
+      >
+        <!-- Left Side: Text Content -->
+        <div
+          class="text-white text-center mt-10 md:text-left md:w-1/2 mb-5 md:mb-0 md:mt-0"
+        >
+          <h1
+            class="text-4xl md:text-7xl font-extrabold leading-tight mb-4 fade-in-left fade-delay-1"
+          >
+            Enjoy the <span class="text-accent">Freshest</span> Delicious Meals
+          </h1>
+          <p
+            class="text-lg lg:text-xl mb-8 max-w-lg mx-auto md:mx-0 fade-in-left fade-delay-2"
+          >
+            Savor the moment with our specially crafted dishes, made from the
+            freshest ingredients for an unforgettable taste.
+          </p>
+          <div
+            class="flex justify-center md:justify-start space-x-4 fade-in-left fade-delay-3"
+          >
+            <a
+              href="#menu"
+              class="bg-primary text-white px-8 py-2 rounded-full text-lg font-semibold light-hover duration-300"
+              >View Menu</a
+            >
+          </div>
+        </div>
+        <!-- Right Side: Image -->
+        <div
+          class="md:w-1/2 flex justify-center fade-in is-visible duration-500"
+          style="transition-delay: 300ms"
+        >
+          <div class="steam-animation">
+            <img
+              src="/assets/media/hero.png"
+              alt="Delicious Burger"
+              class="w-full max-w-md lg:max-w-lg fade-delay-1 fade-in-right"
+            />
+            <!-- Steam elements for animation -->
+            <div class="steam s1"></div>
+            <div class="steam s2"></div>
+            <div class="steam s3"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-us" class="py-20 bg-section">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-bold mb-2">Why Choose Us?</h2>
+        <p class="text-gray-600 mb-12 max-w-2xl mx-auto">
+          We're not just about food; we're about the experience. Here's what
+          makes us stand out.
+        </p>
+        <div class="grid md:grid-cols-3 gap-15">
+          <!-- Feature 1 -->
+          <div class="fade-in" style="transition-delay: 200ms">
+            <div class="bg-primary inline-block p-3 rounded-full mb-4">
+              <i class="bi bi-leaf text-4xl p-1 text-white"></i>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Fresh Ingredients</h3>
+            <p class="max-w-2xs mx-auto text-sm">
+              We source the best local ingredients to ensure every dish is
+              fresh, flavorful, and of the highest quality.
+            </p>
+          </div>
+          <!-- Feature 2 -->
+          <div class="fade-in" style="transition-delay: 400ms">
+            <div class="bg-primary inline-block p-3 rounded-full mb-4">
+              <i class="bi bi-fork-knife text-4xl p-1 text-white"></i>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Special Recipes</h3>
+            <p class="max-w-2xs mx-auto text-sm">
+              Our chefs create unique and mouth-watering recipes that you won't
+              find anywhere else.
+            </p>
+          </div>
+          <!-- Feature 3 -->
+          <div class="fade-in" style="transition-delay: 600ms">
+            <div class="bg-primary inline-block p-3 rounded-full mb-4">
+              <i class="bi bi-emoji-laughing text-4xl p-1 text-white"></i>
+            </div>
+            <h3 class="text-lg font-bold mb-2">Great Atmosphere</h3>
+            <p class="max-w-2xs mx-auto text-sm">
+              Enjoy a cozy and welcoming environment perfect for any occasion,
+              from family dinners to casual meetups.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-20 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-5">
+          <h2 class="text-4xl font-bold mb-2">Our Menu</h2>
+          <p class="text-gray-600">
+            Explore our delicious offerings, crafted with passion.
+          </p>
+        </div>
+        <!-- Filter Buttons -->
+        <div class="flex justify-center flex-wrap space-x-2 md:space-x-4 mb-12">
+          <button
+            class="menu-filter-btn filter-menu-active bg-gray-200 text-gray-700 px-6 py-2 rounded-full mb-2"
+            data-filter="all"
+          >
+            All
+          </button>
+          <button
+            class="menu-filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full mb-2"
+            data-filter="main"
+          >
+            Main
+          </button>
+          <button
+            class="menu-filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full mb-2"
+            data-filter="drinks"
+          >
+            Drinks
+          </button>
+          <button
+            class="menu-filter-btn bg-gray-200 text-gray-700 px-6 py-2 rounded-full mb-2"
+            data-filter="desserts"
+          >
+            Desserts
+          </button>
+        </div>
+        <!-- Menu Grid -->
+        <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Main Item: Grilled Sea Bream -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/QCT3HXnY/main1.jpg"
+                loading="eager"
+                alt="Grilled Mediterranean Sea Bream"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Grilled Sea Bream</h3>
+                <p class="text-gray-600 mb-2">
+                  Fresh from the sea, grilled to perfection.
+                </p>
+                <span class="text-2xl font-bold text-primary">350 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/QCT3HXnY/main1.jpg"
+                  loading="eager"
+                  alt="Grilled Mediterranean Sea Bream"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    [Fresh sea bream, olive oil, lemon, herbs, salt, pepper,
+                    lettuce, cucumber, cherry tomatoes, red onion.]
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.8/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Item: Classic Golden Fries -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/vBLGw5sD/main2.jpg"
+                loading="eager"
+                alt="Classic Golden Fries"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Classic Golden Fries</h3>
+                <p class="text-gray-600 mb-2">
+                  Crispy, golden, and perfectly salted.
+                </p>
+                <span class="text-2xl font-bold text-primary">65 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/vBLGw5sD/main2.jpg"
+                  loading="eager"
+                  alt="Classic Golden Fries"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Potatoes, vegetable oil, salt, ketchup, mayonnaise.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.9/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desserts Item: Velvet Heart Cheesecake -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="desserts"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/Kzs3h7fx/dessert5.jpg"
+                loading="eager"
+                alt="Velvet Heart Cheesecake"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Velvet Heart Cheesecake</h3>
+                <p class="text-gray-600 mb-2">
+                  Creamy, dreamy, and made with love.
+                </p>
+                <span class="text-2xl font-bold text-primary">125 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/Kzs3h7fx/dessert5.jpg"
+                  loading="eager"
+                  alt="Velvet Heart Cheesecake"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Chocolate sponge, vanilla cheesecake, cocoa powder.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.7/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Item: Cheesy Fries -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/0Qq94chL/main3.jpg"
+                loading="eager"
+                alt="Cheesy Fries"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Cheesy Fries</h3>
+                <p class="text-gray-600 mb-2">
+                  Crispy fries smothered in a gooey cheese sauce.
+                </p>
+                <span class="text-2xl font-bold text-primary">110 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/0Qq94chL/main3.jpg"
+                  loading="eager"
+                  alt="Cheesy Fries"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Fries, cheddar cheese, mozzarella cheese, milk, butter.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.7/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Drinks Item: Orchard Peach Iced Tea -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="drinks"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/L8MvnfKm/drink7.jpg"
+                loading="eager"
+                alt="Orchard Peach Iced Tea"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Peach Iced Tea</h3>
+                <p class="text-gray-600 mb-2">
+                  Sunshine in a jar, refreshingly sweet.
+                </p>
+                <span class="text-2xl font-bold text-primary">85 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/L8MvnfKm/drink7.jpg"
+                  loading="eager"
+                  alt="Orchard Peach Iced Tea"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Black tea, peach slices, apple, ice.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.7/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Item: The Clubhouse Classic -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/hPGcNJ3P/main4.jpg"
+                loading="eager"
+                alt="The Clubhouse Classic"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">The Clubhouse Classic</h3>
+                <p class="text-gray-600 mb-2">
+                  Triple-decker satisfaction in every bite.
+                </p>
+                <span class="text-2xl font-bold text-primary">175 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/hPGcNJ3P/main4.jpg"
+                  loading="eager"
+                  alt="The Clubhouse Classic"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Toasted bread, roast turkey, beef bacon, cheddar cheese,
+                    lettuce, tomato, mayonnaise, fries.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.8/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Item: Hearty Meatball & Noodle Soup -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/dtSwFqzR/main5.jpg"
+                loading="eager"
+                alt="Hearty Meatball & Noodle Soup"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Meatball Noodle Soup</h3>
+                <p class="text-gray-600 mb-2">
+                  A comforting classic, just like grandma used to make.
+                </p>
+                <span class="text-2xl font-bold text-primary">85 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/dtSwFqzR/main5.jpg"
+                  loading="eager"
+                  alt="Hearty Meatball & Noodle Soup"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Beef meatballs, vermicelli noodles, tomato broth, spices,
+                    lime.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.6/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Item: Pan-Seared Kofta -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/htdWqV8g/main7.jpg"
+                loading="eager"
+                alt="Pan-Seared Kofta with Potatoes"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Pan-Seared Kofta</h3>
+                <p class="text-gray-600 mb-2">
+                  Juicy, flavorful, and wonderfully satisfying.
+                </p>
+                <span class="text-2xl font-bold text-primary">240 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/htdWqV8g/main7.jpg"
+                  loading="eager"
+                  alt="Pan-Seared Kofta with Potatoes"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Beef kofta, potatoes, cherry tomatoes, parsley, spices.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.7/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Item: Rustic Garden Vegetable Soup -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/nLf8VMTm/main9.jpg"
+                loading="eager"
+                alt="Rustic Garden Vegetable Soup"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Vegetable Soup</h3>
+                <p class="text-gray-600 mb-2">
+                  Simple, wholesome, and bursting with freshness.
+                </p>
+                <span class="text-2xl font-bold text-primary">75 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/nLf8VMTm/main9.jpg"
+                  loading="eager"
+                  alt="Rustic Garden Vegetable Soup"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Vegetable broth, potatoes, red pepper, onions, Baladi bread,
+                    lemon.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.5/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desserts Item: The Ultimate Freak Bowl -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="desserts"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/FHmqwwKb/dessert2.jpg"
+                loading="eager"
+                alt="The Ultimate Freak Bowl"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">The Ultimate Freak Bowl</h3>
+                <p class="text-gray-600 mb-2">
+                  An eruption of flavor designed for sharing.
+                </p>
+                <span class="text-2xl font-bold text-primary">250 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/FHmqwwKb/dessert2.jpg"
+                  loading="eager"
+                  alt="The Ultimate Freak Bowl"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Strawberries, kiwi, banana, brownies, Oreo cookies, whipped
+                    cream, chocolate sauce.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.8/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Item: Creamy Lentil Soup -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/8P7xhL0W/main10.jpg"
+                loading="eager"
+                alt="Creamy Lentil Soup"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Creamy Lentil Soup</h3>
+                <p class="text-gray-600 mb-2">
+                  The golden soup that warms the soul.
+                </p>
+                <span class="text-2xl font-bold text-primary">65 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/8P7xhL0W/main10.jpg"
+                  loading="eager"
+                  alt="Creamy Lentil Soup"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Red lentils, carrots, onions, cumin, dried mint, lemon.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 5/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Item: Herb-Roasted Chicken & Potatoes -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/QN4R9f0h/main11.jpg"
+                loading="eager"
+                alt="Herb-Roasted Chicken & Potatoes"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Herb-Roasted Chicken</h3>
+                <p class="text-gray-600 mb-2">
+                  Crispy skin, juicy meat, and perfectly seasoned.
+                </p>
+                <span class="text-2xl font-bold text-primary">260 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/QN4R9f0h/main11.jpg"
+                  loading="eager"
+                  alt="Herb-Roasted Chicken & Potatoes"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Chicken, potatoes, thyme, rosemary, garlic, parsley, red
+                    onions.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.8/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Item: Char-Grilled Chicken Platter -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/rmyPz44D/main13.jpg"
+                loading="eager"
+                alt="Char-Grilled Chicken Platter"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Grilled Chicken Platter</h3>
+                <p class="text-gray-600 mb-2">
+                  Smoky, juicy, and perfect for dipping.
+                </p>
+                <span class="text-2xl font-bold text-primary">210 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/rmyPz44D/main13.jpg"
+                  loading="eager"
+                  alt="Char-Grilled Chicken Platter"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Chicken wings, chicken thighs, spices, flatbread, potatoes,
+                    spicy tomato dip.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.8/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Item: Rustic Spiced Potatoes -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/yxkpyzvB/main15.jpg"
+                loading="eager"
+                alt="Rustic Spiced Potatoes"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Rustic Spiced Potatoes</h3>
+                <p class="text-gray-600 mb-2">
+                  Crispy on the outside, fluffy on the inside.
+                </p>
+                <span class="text-2xl font-bold text-primary">75 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/yxkpyzvB/main15.jpg"
+                  loading="eager"
+                  alt="Rustic Spiced Potatoes"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Potatoes, paprika, garlic, herbs, salt, vegetable oil.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.8/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drinks Item: Classic Mint Mojito -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="drinks"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/zvgvms3F/drink1.jpg"
+                loading="eager"
+                alt="Classic Mint Mojito"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Classic Mint Mojito</h3>
+                <p class="text-gray-600 mb-2">
+                  The ultimate refreshing escape in a glass.
+                </p>
+                <span class="text-2xl font-bold text-primary">140 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/zvgvms3F/drink1.jpg"
+                  loading="eager"
+                  alt="Classic Mint Mojito"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Fresh mint, lime, sugar, soda water, crushed ice.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.8/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drinks Item: Caramel Crunch Milkshake -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="drinks"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/PrDp0wwn/drink2.jpg"
+                loading="eager"
+                alt="Caramel Crunch Milkshake"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Caramel Milkshake</h3>
+                <p class="text-gray-600 mb-2">
+                  A creamy, dreamy, and decadent delight.
+                </p>
+                <span class="text-2xl font-bold text-primary">115 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/PrDp0wwn/drink2.jpg"
+                  loading="eager"
+                  alt="Caramel Crunch Milkshake"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Vanilla ice cream, milk, caramel sauce, whipped cream,
+                    chocolate drizzle.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.7/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drinks Item: Sunset Mango Martini -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="drinks"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/pTyyChH7/drink3.jpg"
+                loading="eager"
+                alt="Sunset Mango Martini"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Sunset Mango Martini</h3>
+                <p class="text-gray-600 mb-2">
+                  Elegance and tropical flavor, perfectly chilled.
+                </p>
+                <span class="text-2xl font-bold text-primary">155 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/pTyyChH7/drink3.jpg"
+                  loading="eager"
+                  alt="Sunset Mango Martini"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Mango purée, orange juice, mint, orange slice.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.6/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Main Item: Clay Pot Beef Tagine -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/FHMvfTF7/main6.jpg"
+                loading="eager"
+                alt="Clay Pot Beef Tagine"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Clay Pot Beef Tagine</h3>
+                <p class="text-gray-600 mb-2">
+                  Slow-cooked to tender perfection, rich with flavor.
+                </p>
+                <span class="text-2xl font-bold text-primary">320 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/FHMvfTF7/main6.jpg"
+                  loading="eager"
+                  alt="Clay Pot Beef Tagine"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Beef cubes, potatoes, onions, sweet peppers, tomato sauce,
+                    spices, fresh cilantro.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.9/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drinks Item: Ruby Red Reviver -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="drinks"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/Sx7d8skC/drink4.jpg"
+                loading="eager"
+                alt="Ruby Red Reviver"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Ruby Red Reviver</h3>
+                <p class="text-gray-600 mb-2">
+                  A vibrant blast of healthy and delicious.
+                </p>
+                <span class="text-2xl font-bold text-primary">90 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/Sx7d8skC/drink4.jpg"
+                  loading="eager"
+                  alt="Ruby Red Reviver"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Beetroot, strawberries, orange juice, ice.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.5/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Item: Spiced Eggplant Mosa'a'ah -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/j2F9pjLL/main8.jpg"
+                loading="eager"
+                alt="Spiced Eggplant Mosa'a'ah"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Eggplant Mosa'a'ah</h3>
+                <p class="text-gray-600 mb-2">
+                  A rich and savory taste of authentic Egyptian cuisine.
+                </p>
+                <span class="text-2xl font-bold text-primary">70 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/j2F9pjLL/main8.jpg"
+                  loading="eager"
+                  alt="Spiced Eggplant Mosa'a'ah"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Eggplant, sweet peppers, onions, garlic, tomato sauce,
+                    spices.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.8/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Main Item: Velvety Tomato & Basil Soup -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/90MKg9X6/main12.jpg"
+                loading="eager"
+                alt="Velvety Tomato & Basil Soup"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Tomato & Basil Soup</h3>
+                <p class="text-gray-600 mb-2">
+                  Rich, creamy, and full of sun-ripened flavor.
+                </p>
+                <span class="text-2xl font-bold text-primary">80 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/90MKg9X6/main12.jpg"
+                  loading="eager"
+                  alt="Velvety Tomato & Basil Soup"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Tomatoes, fresh basil, cream, vegetable broth, garlic.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.7/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drinks Item: Spiced Ocean Mary -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="drinks"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/9MS0nmXf/drink5.jpg"
+                loading="eager"
+                alt="Spiced Ocean Mary"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Spiced Ocean Mary</h3>
+                <p class="text-gray-600 mb-2">
+                  A bold and savory twist on a timeless classic.
+                </p>
+                <span class="text-2xl font-bold text-primary">180 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/9MS0nmXf/drink5.jpg"
+                  loading="eager"
+                  alt="Spiced Ocean Mary"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Tomato juice, lemon, herbs, spices, poached shrimp.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.9/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desserts Item: Classic Cheese Kunafa -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="desserts"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/wMCt76nr/dessert6.jpg"
+                loading="eager"
+                alt="Classic Cheese Kunafa"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Classic Cheese Kunafa</h3>
+                <p class="text-gray-600 mb-2">
+                  Golden-baked perfection, crispy, cheesy, and sweet.
+                </p>
+                <span class="text-2xl font-bold text-primary">130 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/wMCt76nr/dessert6.jpg"
+                  loading="eager"
+                  alt="Classic Cheese Kunafa"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Shredded phyllo dough, Nabulsi cheese, sugar syrup,
+                    pistachios, cream (ashta).
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 5/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drinks Item: Ultimate Oreo Overload -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="drinks"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/kXSfJsHj/drink6.jpg"
+                loading="eager"
+                alt="Ultimate Oreo Overload"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Ultimate Oreo Overload</h3>
+                <p class="text-gray-600 mb-2">
+                  Your favorite cookie, blended to perfection.
+                </p>
+                <span class="text-2xl font-bold text-primary">120 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/kXSfJsHj/drink6.jpg"
+                  loading="eager"
+                  alt="Ultimate Oreo Overload"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Vanilla ice cream, milk, Oreo cookies, whipped cream,
+                    chocolate sauce.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.8/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drinks Item: Egyptian Sunrise -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="drinks"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/6Tx3BMvJ/drink8.jpg"
+                loading="eager"
+                alt="Egyptian Sunrise"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Egyptian Sunrise</h3>
+                <p class="text-gray-600 mb-2">
+                  Sip on the colors of a desert dawn.
+                </p>
+                <span class="text-2xl font-bold text-primary">145 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/6Tx3BMvJ/drink8.jpg"
+                  loading="eager"
+                  alt="Egyptian Sunrise"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Orange juice, grenadine, orange slice, ice.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.9/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Desserts Item: Artisan Berry Cheesecake -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="desserts"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/bvyZGVFq/dessert7.jpg"
+                loading="eager"
+                alt="Artisan Berry Cheesecake"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Artisan Berry Cheesecake</h3>
+                <p class="text-gray-600 mb-2">
+                  A masterpiece of berry flavor and delicate texture.
+                </p>
+                <span class="text-2xl font-bold text-primary">160 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/bvyZGVFq/dessert7.jpg"
+                  loading="eager"
+                  alt="Artisan Berry Cheesecake"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Raspberry cheesecake, biscuit crust, lace tuiles, candied
+                    citrus, berry coulis.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.8/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drinks Item: Crimson Hibiscus Cooler -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="drinks"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/9XKLHKLR/drink9.jpg"
+                loading="eager"
+                alt="Crimson Hibiscus Cooler"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Hibiscus Cooler</h3>
+                <p class="text-gray-600 mb-2">
+                  A tangy and refreshing floral infusion.
+                </p>
+                <span class="text-2xl font-bold text-primary">75 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/9XKLHKLR/drink9.jpg"
+                  loading="eager"
+                  alt="Crimson Hibiscus Cooler"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Hibiscus tea (Karkade), sugar, mint, orange peel, ice.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.6/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Drinks Item: The Alchemist's Sour -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="drinks"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/J4j5Vnyv/drink10.jpg"
+                loading="eager"
+                alt="The Alchemist's Sour"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">The Alchemist's Sour</h3>
+                <p class="text-gray-600 mb-2">
+                  An enchanting blend of citrus, smoke, and spice.
+                </p>
+                <span class="text-2xl font-bold text-primary">210 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/J4j5Vnyv/drink10.jpg"
+                  loading="eager"
+                  alt="The Alchemist's Sour"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Citrus juice, botanical infusions, foam, dehydrated blood
+                    orange, herbs, cinnamon.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.9/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desserts Item: Profiterole Chocolate Tower -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="desserts"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/pLZ7vk9w/dessert3.jpg"
+                loading="eager"
+                alt="Profiterole Chocolate Tower"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Profiterole Tower</h3>
+                <p class="text-gray-600 mb-2">
+                  A decadent stack of creamy mousse and chocolate bliss.
+                </p>
+                <span class="text-2xl font-bold text-primary">150 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/pLZ7vk9w/dessert3.jpg"
+                  loading="eager"
+                  alt="Profiterole Chocolate Tower"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Chocolate mousse, sponge cake, milk chocolate, dark
+                    chocolate, cream-filled profiteroles.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.7/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desserts Item: Bubble Waffle Galaxy Cup -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="desserts"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/wBjrjJL7/dessert1.jpg"
+                loading="eager"
+                alt="Bubble Waffle Galaxy Cup"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Bubble Waffle Cup</h3>
+                <p class="text-gray-600 mb-2">
+                  A cosmic creation of crunch and cream.
+                </p>
+                <span class="text-2xl font-bold text-primary">110 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/wBjrjJL7/dessert1.jpg"
+                  loading="eager"
+                  alt="Bubble Waffle Galaxy Cup"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Bubble waffle, vanilla ice cream, strawberry sauce, cereal
+                    puffs, Oreo, chocolate biscuit sticks.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.6/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Main Item: Sautéed Garden Vegetables -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="main"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/XJ2D5vKQ/main14.jpg"
+                loading="eager"
+                alt="Sautéed Garden Vegetables"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Sautéed Vegetables</h3>
+                <p class="text-gray-600 mb-2">
+                  A vibrant, crisp, and healthy addition to any meal.
+                </p>
+                <span class="text-2xl font-bold text-primary">95 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/XJ2D5vKQ/main14.jpg"
+                  loading="eager"
+                  alt="Sautéed Garden Vegetables"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Broccoli, green beans, bell peppers, yellow squash, olive
+                    oil, garlic, Parmesan cheese.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.6/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desserts Item: Walnut Honey Dream Cake -->
+          <div
+            class="menu-item fade-in"
+            onclick="rotateItem(this)"
+            data-category="desserts"
+          >
+            <div
+              class="front card-face bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all"
+            >
+              <img
+                src="https://i.postimg.cc/rpfK5Gvx/dessert4.jpg"
+                loading="eager"
+                alt="Walnut Honey Dream Cake"
+                class="w-full h-48 object-cover"
+              />
+              <div class="p-5">
+                <h3 class="text-xl font-bold mb-2">Walnut Honey Cake</h3>
+                <p class="text-gray-600 mb-2">
+                  Layers of honey-kissed sponge and delicate cream.
+                </p>
+                <span class="text-2xl font-bold text-primary">95 EGP</span>
+                <p
+                  class="text-gray-600 mt-2 text-sm text-center pt-2 border-t border-gray-200"
+                >
+                  click for more details
+                </p>
+              </div>
+            </div>
+            <div
+              class="is-hidden card-face back bg-white rounded-lg shadow-lg overflow-hidden hover:translate-y-[-8px] duration-300 transition-all flex items-center"
+            >
+              <div class="content w-full">
+                <img
+                  src="https://i.postimg.cc/rpfK5Gvx/dessert4.jpg"
+                  loading="eager"
+                  alt="Walnut Honey Dream Cake"
+                  class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                  <h2 class="font-bold text-xl">Ingredients:</h2>
+                  <p class="text-gray-600 py-2 text-sm">
+                    Honey sponge cake, cream cheese frosting, chocolate glaze,
+                    toasted walnuts.
+                  </p>
+                  <div
+                    class="rate flex font-bold border-t border-gray-200 pt-2"
+                  >
+                    <h2 class="text-sm">Rating:</h2>
+                    <p class="text-primary ml-2 text-sm">⭐ 4.9/5</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center mt-5">
+          <button
+            id="view-more-btn"
+            class="bg-primary text-white px-8 py-3 rounded-full font-semibold light-hover transition duration-300"
+          >
+            View More
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Offers Section -->
+    <section id="offers" class="py-15 text-white">
+      <div
+        class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12 transition-all duration-500"
+      >
+        <!-- Image -->
+        <div class="md:w-2/5 fade-in-left transition-all duration-500">
+          <img
+            src="/assets/media/special-offer.jpg"
+            alt="Special Offer"
+            class="rounded-lg shadow-4xl"
+          />
+        </div>
+        <!-- Content -->
+        <div
+          class="md:w-1/2 text-center md:text-left fade-in-right transition-all duration-500"
+          style="transition-delay: 500ms"
+        >
+          <h2 class="text-4xl font-extrabold mb-4 uppercase">
+            Weekend Special Offer
+          </h2>
+          <h3 class="text-2xl font-semibold mb-4">Weekend Biryani Feast</h3>
+          <div
+            class="price flex items-center justify-center md:justify-start mb-6"
+          >
+            <p
+              class="text-lg font-bold text-white decoration-gray-200 line-through font-serif"
+            >
+              600 EGP
+            </p>
+            <p class="text-3xl font-bold text-accent mx-4 font-serif">
+              300 EGP
+            </p>
+          </div>
+          <p class="text-lg mb-6 md:w-156 ">
+            Get a 50% discount on this delicious dish this weekend! Don't miss
+            out on this limited-time deal.
+          </p>
+          <!-- Countdown Timer -->
+          <div
+            id="countdown"
+            class="flex justify-center md:justify-start items-center space-x-4 text-center font-serif bg-black/80 w-78 -skew-x-5 px-4 py-3 mx-auto md:mx-0"
+          >
+            <div>
+              <span id="days" class="text-4xl font-bold text-accent">00</span>
+              <p>Days</p>
+            </div>
+            <div>
+              <span id="hours" class="text-4xl font-bold text-accent">00</span>
+              <p>Hours</p>
+            </div>
+            <div>
+              <span id="minutes" class="text-4xl font-bold text-accent"
+                >00</span
+              >
+              <p>Minutes</p>
+            </div>
+            <div>
+              <span
+                id="seconds"
+                class="text-4xl font-bold text-accent pulse-animation"
+                >00</span
+              >
+              <p>Seconds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-100">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl font-extrabold mb-12 text-gray-800">
+          What Our Customers Say
+        </h2>
+        <div class="relative max-w-lg mx-auto">
+          <!-- Slider container -->
+          <div id="testimonial-slider" class="overflow-hidden">
+            <div
+              id="slider-track"
+              class="flex transition-transform duration-500 ease-in-out"
+            >
+              <!-- Testimonial 1 -->
+              <div class="testimonial-slide w-full flex-shrink-0 px-6">
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                  <img
+                    src="/assets/media/download.jpg"
+                    alt="Customer"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-primary shadow-md"
+                  />
+                  <p class="italic text-gray-700 mb-4 leading-relaxed">
+                    "The food was absolutely amazing! Best food I've had in
+                    years. The atmosphere is so cozy and welcoming."
+                  </p>
+                  <h4 class="font-semibold text-gray-900">- Jane Doe</h4>
+                </div>
+              </div>
+              <!-- Testimonial 2 -->
+              <div class="testimonial-slide w-full flex-shrink-0 px-6">
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                  <img
+                    src="/assets/media/2.jpg"
+                    alt="Customer"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-primary shadow-md"
+                  />
+                  <p class="italic text-gray-700 mb-4 leading-relaxed">
+                    "A wonderful experience from start to finish. The staff were
+                    friendly and the special offer was a great deal!"
+                  </p>
+                  <h4 class="font-semibold text-gray-900">- John Smith</h4>
+                </div>
+              </div>
+              <!-- Testimonial 3 -->
+              <div class="testimonial-slide w-full flex-shrink-0 px-6">
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                  <img
+                    src="/assets/media/thispersondoesnotexist.jpg"
+                    alt="Customer"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-primary shadow-md"
+                  />
+                  <p class="italic text-gray-700 mb-4 leading-relaxed">
+                    "I highly recommend FryDay for anyone looking for quality
+                    food and excellent service. Will be back soon!"
+                  </p>
+                  <h4 class="font-semibold text-gray-900">- Emily Johnson</h4>
+                </div>
+              </div>
+              <!-- Testimonial 4 -->
+              <div class="testimonial-slide w-full flex-shrink-0 px-6">
+                <div class="bg-white rounded-2xl shadow-lg p-8">
+                  <img
+                    src="/assets/media/1.jpg"
+                    alt="Customer"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-primary shadow-md"
+                  />
+                  <p class="italic text-gray-700 mb-4 leading-relaxed">
+                    "FryDay never disappoints. The fries were perfectly crispy,
+                    and the service was top-notch. Easily my go-to spot after
+                    work!"
+                  </p>
+                  <h4 class="font-semibold text-gray-900">- Michael Carter</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slider controls -->
+          <button
+            id="prev-slide"
+            class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-primary text-white p-3 rounded-full shadow-md hover:scale-110 transition"
+          >
+            &#10094;
+          </button>
+          <button
+            id="next-slide"
+            class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-primary text-white p-3 rounded-full shadow-md hover:scale-110 transition"
+          >
+            &#10095;
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!--SUCCESFUL RESERVATION NOTI-->
+    <div
+      id="reservation-success"
+      class="hidden fade-in fixed top-6 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50"
+    >
+      Reservation successful! Thank you for choosing FryDay.
+    </div>
+    <!-- Contact & Reservation Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container mx-auto px-10">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold">Contact & Reservation</h2>
+          <p class="text-gray-600">Book your table or get in touch with us.</p>
+        </div>
+        <div class="flex flex-col md:flex-row gap-12">
+          <!-- Reservation Form -->
+          <div class="md:w-1/2 fade-in">
+            <form id="reservation-form" class="space-y-6">
+              <input
+                type="text"
+                placeholder="Your Name"
+                required
+                class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <input
+                type="tel"
+                placeholder="Phone Number"
+                required
+                pattern="[0-9]{10,15}"
+                class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <input
+                type="date"
+                required
+                class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <input
+                type="number"
+                placeholder="Number of People"
+                required
+                min="1"
+                max="100"
+                class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+              />
+              <button
+                type="submit"
+                class="w-full bg-primary text-white p-4 rounded-lg font-bold text-lg hover:-translate-y-2 transition-all duration-400"
+              >
+                Reserve a Table
+              </button>
+            </form>
+          </div>
+          <!-- Google Map -->
+          <div
+            class="md:w-full h-96 md:h-auto fade-in"
+            style="transition-delay: 200ms"
+          >
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3456.223528828954!2d31.20599051511348!3d29.97298998190863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14584f7de2c34d47%3A0x6da2a69f74a6b8e3!2sGreat%20Pyramid%20of%20Giza!5e0!3m2!1sen!2seg!4v1663084711395!5m2!1sen!2seg"
+              width="100%"
+              height="100%"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              class="rounded-lg shadow-lg"
+            >
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-700 text-white pb-5 pt-8 antialiased">
+      <div class="container mx-auto px-4 text-center">
+        <div class="grid md:grid-cols-3 gap-8 mb-4">
+          <div>
+            <h3 class="text-3xl font-extrabold mb-2">
+              <span class="text-accent">Fry</span>Day
+            </h3>
+            <p class="w-80 mx-auto text-sm text-gray-200">
+              The best place to enjoy fresh and delicious meals with family and
+              friends.
+            </p>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Quick Links</h3>
+            <ul class="gap-4 flex items-center justify-center">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-200 hover-text-accent transition-all duration-200"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#menu"
+                  class="text-gray-200 hover-text-accent transition-all duration-200"
+                  >Menu</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#offers"
+                  class="text-gray-200 hover-text-accent transition-all duration-200"
+                  >Offers</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-200 hover-text-accent transition-all duration-200"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+            <div class="flex justify-center space-x-4 text-sm">
+              <a href="#">
+                <svg
+                  class="w-8 h-8 p-1 bg-primary rounded-full hover:-translate-y-1 transition-all duration-300"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#ffffff"
+                  width="800px"
+                  height="800px"
+                  viewBox="0 0 32 32"
+                >
+                  <path
+                    d="M21.95 5.005l-3.306-.004c-3.206 0-5.277 2.124-5.277 5.415v2.495H10.05v4.515h3.317l-.004 9.575h4.641l.004-9.575h3.806l-.003-4.514h-3.803v-2.117c0-1.018.241-1.533 1.566-1.533l2.366-.001.01-4.256z"
+                  />
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  class="w-8 h-8 p-1 bg-primary rounded-full hover:-translate-y-1 transition-all duration-300"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="800px"
+                  height="800px"
+                  viewBox="0 0 200 200"
+                  fill="none"
+                >
+                  <path
+                    stroke="#ffffff"
+                    stroke-width="12"
+                    d="M96 162c-14.152 0-24.336-.007-32.276-.777-7.849-.761-12.87-2.223-16.877-4.741a36 36 0 0 1-11.33-11.329c-2.517-4.007-3.98-9.028-4.74-16.877C30.007 120.336 30 110.152 30 96c0-14.152.007-24.336.777-32.276.76-7.849 2.223-12.87 4.74-16.877a36 36 0 0 1 11.33-11.33c4.007-2.517 9.028-3.98 16.877-4.74C71.663 30.007 81.847 30 96 30c14.152 0 24.336.007 32.276.777 7.849.76 12.87 2.223 16.877 4.74a36 36 0 0 1 11.329 11.33c2.518 4.007 3.98 9.028 4.741 16.877.77 7.94.777 18.124.777 32.276 0 14.152-.007 24.336-.777 32.276-.761 7.849-2.223 12.87-4.741 16.877a36 36 0 0 1-11.329 11.329c-4.007 2.518-9.028 3.98-16.877 4.741-7.94.77-18.124.777-32.276.777Z"
+                  />
+                  <circle
+                    cx="96"
+                    cy="96"
+                    r="30"
+                    stroke="#ffffff"
+                    stroke-width="12"
+                  />
+                  <circle cx="135" cy="57" r="9" fill="#ffffff" />
+                </svg>
+              </a>
+              <a href="#">
+                <svg
+                  class="w-8 h-8 p-2 bg-primary rounded-full hover:-translate-y-1 transition-all duration-300"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="#ffffff"
+                  preserveAspectRatio="xMidYMid"
+                  width="31.812"
+                  height="26"
+                  viewBox="0 0 31.812 26"
+                >
+                  <path
+                    d="M20.877,2.000 C22.519,2.000 24.382,2.652 25.426,3.738 C26.724,3.486 27.949,3.025 29.050,2.386 C28.625,3.687 27.718,4.779 26.540,5.469 C27.693,5.332 28.797,5.035 29.820,4.590 C29.054,5.707 28.087,6.690 26.971,7.477 C26.981,7.715 26.987,7.955 26.987,8.195 C26.987,15.562 21.445,24.000 10.939,24.000 C7.715,24.000 4.507,23.133 1.982,21.551 C2.428,21.605 2.883,21.631 3.343,21.631 C6.019,21.631 8.482,20.740 10.439,19.242 C7.937,19.199 5.827,17.586 5.103,15.373 C5.450,15.437 5.810,15.473 6.178,15.473 C6.696,15.473 7.203,15.406 7.681,15.277 C5.068,14.768 3.100,12.514 3.100,9.813 C3.100,9.787 3.100,9.764 3.100,9.740 C3.871,10.158 4.750,10.410 5.687,10.440 C4.154,9.437 3.147,7.734 3.147,5.799 C3.147,4.777 3.428,3.818 3.919,2.998 C6.735,6.367 10.945,8.588 15.693,8.822 C15.594,8.414 15.543,7.984 15.543,7.553 C15.543,4.473 17.721,2.000 20.877,2.000 M29.820,4.590 L29.825,4.590 M20.877,-0.000 C17.033,-0.000 14.060,2.753 13.614,6.552 C10.425,5.905 7.524,4.204 5.440,1.711 C5.061,1.257 4.503,0.998 3.919,0.998 C3.867,0.998 3.815,1.000 3.763,1.004 C3.123,1.055 2.547,1.413 2.216,1.966 C1.525,3.122 1.159,4.447 1.159,5.799 C1.159,6.700 1.321,7.579 1.625,8.400 C1.300,8.762 1.113,9.238 1.113,9.740 L1.113,9.813 C1.113,11.772 1.882,13.589 3.160,14.952 C3.087,15.294 3.103,15.655 3.215,15.998 C3.657,17.348 4.459,18.510 5.499,19.396 C4.800,19.552 4.079,19.631 3.343,19.631 C2.954,19.631 2.577,19.609 2.222,19.565 C2.141,19.556 2.061,19.551 1.981,19.551 C1.148,19.551 0.391,20.078 0.108,20.886 C-0.202,21.770 0.140,22.753 0.932,23.249 C3.764,25.023 7.318,26.000 10.939,26.000 C17.778,26.000 22.025,22.843 24.383,20.195 C27.243,16.984 28.907,12.718 28.972,8.455 C29.899,7.682 30.717,6.790 31.410,5.792 C31.661,5.458 31.810,5.041 31.810,4.590 C31.810,3.909 31.473,3.308 30.958,2.946 C31.181,2.176 30.925,1.342 30.303,0.833 C29.940,0.537 29.496,0.386 29.049,0.386 C28.708,0.386 28.365,0.474 28.056,0.654 C27.391,1.040 26.680,1.344 25.931,1.562 C24.555,0.592 22.688,-0.000 20.877,-0.000 L20.877,-0.000 Z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-gray-500 pt-5 text-sm">
+          <p>
+            &copy; 2025 FryDay. All Rights Reserved. Made by
+            <span class="text-accent font-serif">Lavinia Nael </span>♡
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/main.js"></script>
+  </body>
+</html>
